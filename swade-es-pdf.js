@@ -2,10 +2,11 @@ Hooks.once('init', () => {
     game.settings.register('swade-es', 'pdfDirectory', {
         name: 'Ubicación de los libros en PDF',
         hint: 'Indica la carpeta donde estan los libros en pdf',
-        type: window.Azzu.SettingsTypes.DirectoryPicker,
+        type: String,
         default: ' ',
         scope: 'world',
         config: true,
+		filePicker: "folder",
         onChange: directory => {
             window.location.reload();
         }
