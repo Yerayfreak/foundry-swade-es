@@ -1,4 +1,4 @@
-import { createActionCardTable } from "/systems/swade/module/util.js";
+import { createActionCardTable } from "/systems/swade/module/util.js"; 
 
 Hooks.once('init', () => {
 
@@ -29,7 +29,7 @@ Hooks.once('init', () => {
 
 Hooks.on('ready', () => {
     console.log(`Repopulating action cards Table with cards from deck.` + game.settings.get('swade', 'cardDeck'));
-    createActionCardTable(true);
+    createActionCardTable(true); //aqui da error
 });
 
 Hooks.on('createActor', async (actor, options, userId) => {
